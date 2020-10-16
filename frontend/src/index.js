@@ -1,6 +1,5 @@
+import React from 'react';
+import { render } from 'react-dom';
+import App from './App';
 
-const soma = (a, b) => {
-    return a + b;
-};
-
-console.log(soma(1, 9));
+render(<h1>Hello GoStack</h1>, document.getElementById('app'));

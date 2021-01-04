@@ -13,15 +13,15 @@ import api from './services/api';
     }, []);
 
     async function handleAddProject() {
-
-        const response = await api.post('/projects', {
+        
+        const data = {
             title: `novo projeto ${Date.now()}`,
             owner: 'andre luiz'
-        })
+        };
 
-        const project = response.data;
+        const response = await api.post('/projects', data);
 
-        setProjects([...projects, project]);
+        setProjects([...projects, response]);
     }
 
     return (
